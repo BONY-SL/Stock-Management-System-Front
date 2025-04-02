@@ -1,0 +1,142 @@
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../assets/images/bacgraound.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  z-index: 1;
+}
+
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .login-form {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
