@@ -1,4 +1,4 @@
-# 📦 Rajarataproducts Stock-Management System
+# 📦 Rajarata Products Stock-Management System
 
 The **Rajarataproducts Stock-Management System** is a full-stack web application designed to efficiently manage stock and sales operations. It is built using a **monolithic architecture**, combining a **Spring Boot** backend with an **Angular** frontend. This system offers user authentication, inventory tracking, sales handling, and reporting functionalities.
 
