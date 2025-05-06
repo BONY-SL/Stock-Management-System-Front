@@ -22,10 +22,11 @@ The **Rajarataproducts Stock-Management System** is a full-stack web application
 ### Backend
 - **Spring Boot** – Java-based framework for building RESTful APIs
 - **Hibernate** – ORM tool for database interaction
+- **Spring Data JPA** – Persistance
 
 ### Frontend
 - **Angular** – Component-based frontend framework
 - **TypeScript** – Superset of JavaScript for type-safe code
 - **HTML & CSS** – For layout and styling
-
+- **Boostrap** – UI Responsiveness
 
