@@ -1,1 +1,66 @@
+<div class="card-container">
+    <div class="card" *ngFor="let product of products">
+      <img [src]="product.image" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <button (click)="openManage(product.name)" type="button" class="btn btn-dark">Manage</button>
+    </div>
+</div>
+  
+<!-- Overlay and Modal -->
+<div class="modal-overlay" *ngIf="showWattalappam || showJellyPudding || showBiscuitPudding || showCupcake">
+  <div class="modal-box">
+    <button class="close-btn" (click)="closeManage()">X</button>
 
+    <div *ngIf="showWattalappam">
+      <h3 style="text-align: center;">Wattalappam</h3>
+      <table>
+        <thead>
+          <th>80 g</th>
+          <th>250 g</th>
+          <th>500 g</th>
+        </thead>
+      </table>
+      <form>
+        <label for="add-vatalappm">Add Number of Cups : </label>
+        <input type="number" name="add-vatalappm" id="add-vatalappm">
+        <label for="add-type">Select Weight : </label>
+        <select>
+          <option>80 g</option>
+          <option>250 g</option>
+          <option>500 g</option>
+        </select>
+        <button type="button" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+
+    <div *ngIf="showJellyPudding">
+      <h3 style="text-align: center;">Jelly Pudding</h3>
+      <h4 style="background-color: rgb(230, 62, 62);padding: 10px 10px 10px 10px;">Current Stock : {{jellyStock}}</h4>
+      <form>
+        <label for="add-jelli-pudding" style="text-align: center;">Add Number of Cups : </label>
+        <input type="number" name="add-jelli-pudding" id="add-jelli-pudding">
+        <button type="button" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+
+    <div *ngIf="showBiscuitPudding">
+      <h3 style="text-align: center;">Biscuit Pudding</h3>
+      <h4 style="background-color: rgb(230, 62, 62);padding: 10px 10px 10px 10px;">Current Stock : {{biscuitPudding}}</h4>
+      <form>
+        <label for="add-biscut-pudding" style="text-align: center;">Add Number of Cups : </label>
+        <input type="number" name="add-biscut-pudding" id="add-biscut-pudding">
+        <button type="button" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+
+    <div *ngIf="showCupcake">
+      <h3 style="text-align: center;">Cupcake</h3>
+      <h4 style="background-color: rgb(230, 62, 62);padding: 10px 10px 10px 10px;">Current Stock : {{cupCake}}</h4>
+      <form>
+        <label for="add-cup-cake" style="text-align: center;">Add Number of Cups : </label>
+        <input type="number" name="add-cup-cake" id="add-cup-cake">
+        <button type="button" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
